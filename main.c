@@ -13,8 +13,8 @@ void main() {
 
   // Create font.
   font_init();
-  const font_t min_font = font_load(font_min);
-  font_set(min_font);
+  const font_t spect_font = font_load(font_spect);
+  font_set(spect_font);
 
   init_intro();
   state = STATE_INTRO;

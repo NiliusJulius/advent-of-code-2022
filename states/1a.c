@@ -2,26 +2,33 @@
 #include <stdio.h>
 #include <gbdk\console.h>
 #include "..\globals.h"
+#include "..\helper.h"
 #include "..\inputs\input1.h"
 
 #pragma bank 1
 
-uint16_t increases;
 bool executed;
 
 void init_1a() {
-  increases = 0;
   executed = false;
 }
 
 void execute() {
-  for (uint16_t i = 0; i < 1999; i++) {
-    if (input_array[i+1] > input_array[i]) {
-      increases++;
+  uint32_t highest_calories = 0;
+  uint32_t calories = 0;
+  for (uint16_t i = 0; i < array_size; i++) {
+    if (input_array[i] != 0) {
+      calories += input_array[i];
+      if (calories > highest_calories) {
+        highest_calories = calories;
+      }
+    } else {
+      calories = 0;
     }
   }
   gotoxy(0, 0);
-  printf("%d", increases);
+  print_32(&highest_calories);
+  
 }
 
 void run_1a() {
