@@ -6,6 +6,8 @@
 #include "states\intro.h"
 #include "states\1a.h"
 #include "states\1b.h"
+#include "states\2a.h"
+#include "states\2b.h"
 
 #include "maps\intro_map.h"
 
@@ -30,6 +32,12 @@ void main() {
         break;
       case STATE_1B:
         run_1b();
+        break;
+      case STATE_2A:
+        run_2a();
+        break;
+      case STATE_2B:
+        run_2b();
         break;
     }
 

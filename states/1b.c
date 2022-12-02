@@ -7,10 +7,8 @@
 
 #pragma bank 1
 
-bool executed_b;
-
 void init_1b() {
-  executed_b = false;
+  executed = false;
 }
 
 void execute_b() {
@@ -42,9 +40,9 @@ void execute_b() {
 }
 
 void run_1b() {
-  if (!executed_b) {
+  if (!executed) {
     execute_b();
-    executed_b = true;
+    executed = true;
   }
   wait_vbl_done();
 }

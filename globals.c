@@ -8,3 +8,4 @@ uint8_t curr_input;
 uint8_t prev_input;
 
 uint8_t state;
+bool executed;

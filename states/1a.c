@@ -7,8 +7,6 @@
 
 #pragma bank 1
 
-bool executed;
-
 void init_1a() {
   executed = false;
 }

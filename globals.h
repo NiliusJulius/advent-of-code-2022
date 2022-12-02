@@ -68,5 +68,8 @@ extern uint8_t prev_input;
 #define STATE_25B 50
 
 extern uint8_t state;
+extern bool executed;
+
+extern void execute();
 
 #endif
