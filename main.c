@@ -8,6 +8,8 @@
 #include "states\1b.h"
 #include "states\2a.h"
 #include "states\2b.h"
+#include "states\3a.h"
+#include "states\3b.h"
 
 #include "maps\intro_map.h"
 
@@ -38,6 +40,12 @@ void main() {
         break;
       case STATE_2B:
         run_2b();
+        break;
+      case STATE_3A:
+        run_3a();
+        break;
+      case STATE_3B:
+        run_3b();
         break;
     }
 
