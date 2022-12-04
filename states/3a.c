@@ -16,19 +16,29 @@ void execute_3a() {
   uint16_t total_prio = 0;
   for (uint16_t i = 0; i < array_3_size; i++) {
     uint8_t half_length = strlen(input_array_3[i]) / 2;
-    uint8_t item_prio = 0;
+    uint8_t array1[53] = {0};
+    uint8_t array2[53] = {0};
     for (uint8_t j = 0; j < half_length; j++) {
-      for (uint8_t k = half_length; k < half_length * 2; k++) {
-        if (input_array_3[i][j] == input_array_3[i][k]) {
-          if (input_array_3[i][j] > 96) {
-            item_prio = input_array_3[i][j] - 96;
-          } else {
-            item_prio = input_array_3[i][j] - 38;
-          }
-        }
+      uint8_t index = input_array_3[i][j];
+      if ( index > 96) {
+        array1[index - 96] = 1;
+      } else {
+        array1[index - 38] = 1;
       }
     }
-    total_prio += item_prio;
+
+    for (uint8_t j = half_length; j < strlen(input_array_3[i]); j++) {
+      uint8_t index = input_array_3[i][j];
+      if (index > 96) {
+        array2[index - 96] = array1[index - 96] * (index - 96);
+      } else {
+        array2[index - 38] = array1[index - 38] * (index - 38);
+      }
+    }
+
+    for (uint8_t j = 1; j < 53; j++) {
+        total_prio += array2[j];
+    }
   }
   gotoxy(0, 0);
   printf("%d", total_prio);
