@@ -39,5 +39,12 @@ Right column:
 |--------|---------|
 | ^(.*)$ | "$0",   |
 
+### Day 4
+| Search   | Replace |
+|----------|---------|
+| ,        | ,\n     |
+| -        | ,\n     |
+| ([0-9])$ | $0,     |
+
 ## License
 [License](../main/LICENSE)

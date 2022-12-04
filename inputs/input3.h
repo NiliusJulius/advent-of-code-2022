@@ -1,5 +1,5 @@
-#ifndef _INPUT2
-#define _INPUT2
+#ifndef _INPUT3
+#define _INPUT3
 
 #include <stdint.h>
 
