@@ -32,34 +32,34 @@ void execute_3b() {
     bool found_match = false;
 
     for (uint8_t j = 0; j < strlen(input_array_3[i]); j++) {
-      if (input_array_3[i][j] > 96) {
-        array1[input_array_3[i][j] - 96] = input_array_3[i][j] - 96;
+      uint8_t index = input_array_3[i][j];
+      if ( index > 96) {
+        array1[index - 96] = 1;
       } else {
-        array1[input_array_3[i][j] - 38] = input_array_3[i][j] - 38;
+        array1[index - 38] = 1;
       }
     }
 
     for (uint8_t j = 0; j < strlen(input_array_3[i+1]); j++) {
-      if (input_array_3[i+1][j] > 96) {
-        array2[input_array_3[i+1][j] - 96] = input_array_3[i+1][j] - 96;
+      uint8_t index = input_array_3[i+1][j];
+      if ( index > 96) {
+        array2[index - 96] = 1;
       } else {
-        array2[input_array_3[i+1][j] - 38] = input_array_3[i+1][j] - 38;
+        array2[index - 38] = 1;
       }
     }
 
     for (uint8_t j = 0; j < strlen(input_array_3[i+2]); j++) {
-      if (input_array_3[i+2][j] > 96) {
-        array3[input_array_3[i+2][j] - 96] = input_array_3[i+2][j] - 96;
+      uint8_t index = input_array_3[i+2][j];
+      if (index > 96) {
+        array3[index - 96] = array2[index - 96] * array1[index - 96] * (index - 96);
       } else {
-        array3[input_array_3[i+2][j] - 38] = input_array_3[i+2][j] - 38;
+        array3[index - 38] = array2[index - 38] * array1[index - 38] * (index - 38);
       }
     }
 
     for (uint8_t j = 1; j < 53; j++) {
-      if (array1[j] * array2[j] * array3[j] != 0) {
-        total_prio += array1[j];
-        break;
-      }
+        total_prio += array3[j];
     }
   }
   gotoxy(0, 0);
