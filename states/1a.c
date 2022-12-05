@@ -1,5 +1,6 @@
 #include <gb\gb.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <gbdk\console.h>
 #include "..\globals.h"
 #include "..\helper.h"
@@ -25,7 +26,9 @@ void execute() {
     }
   }
   gotoxy(0, 0);
-  print_32(&highest_calories);
+  char dec[10];
+  ultoa(highest_calories, dec, 10);
+  printf(dec);
   
 }
 
