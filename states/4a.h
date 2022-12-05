@@ -1,7 +1,7 @@
-#ifndef _4A
-#define _4A
+#ifndef _5A
+#define _5A
 
-void init_4a();
-void run_4a();
+void init_5a();
+void run_5a();
 
 #endif

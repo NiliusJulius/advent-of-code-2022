@@ -12,6 +12,8 @@
 #include "states\3b.h"
 #include "states\4a.h"
 #include "states\4b.h"
+#include "states\5a.h"
+#include "states\5b.h"
 
 #include "maps\intro_map.h"
 
@@ -54,6 +56,12 @@ void main() {
         break;
       case STATE_4B:
         run_4b();
+        break;
+      case STATE_5A:
+        run_5a();
+        break;
+      case STATE_5B:
+        run_5b();
         break;
     }
 

@@ -46,5 +46,16 @@ Right column:
 | -        | ,\n     |
 | ([0-9])$ | $0,     |
 
+### Day 5
+Manually make 9 stacks padded with zeros to support all possible crates in one stack. Then put them in one big array.
+
+On all the move commands apply the following:
+| Search   | Replace |
+|----------|---------|
+| move\s   |         |
+| \sfrom\s | ,\n     |
+| \sto\s   | ,\n     |
+| ([0-9])$ | $0,     |
+
 ## License
 [License](../main/LICENSE)
