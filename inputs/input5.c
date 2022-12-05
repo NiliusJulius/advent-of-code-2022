@@ -3,7 +3,7 @@
 
 #pragma bank 5
 
-char input_array_5_stacks[] = {
+const char input_array_5_stacks[] = {
     'R', 'G', 'J', 'B', 'T', 'V', 'Z', 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -61,7 +61,7 @@ char input_array_5_stacks[] = {
 };
 
 const uint16_t input_array_5_stacks_count = 9;
-uint8_t input_array_5_stack_counts[] = {
+const uint8_t input_array_5_stack_counts[] = {
     7, 4, 3, 8, 8, 6, 7, 8, 5,
 };
 
