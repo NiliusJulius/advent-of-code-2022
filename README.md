@@ -58,11 +58,7 @@ On all the move commands apply the following:
 | ([0-9])$ | $0,     |
 
 ### Day 6
-| Search   | Replace |
-|----------|---------|
-| ,        | ,\n     |
-| -        | ,\n     |
-| ([0-9])$ | $0,     |
+None required
 
 ### Day 7
 First do a find all on 'dir' and add one for the DIR_COUNT.
