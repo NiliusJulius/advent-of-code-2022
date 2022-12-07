@@ -57,5 +57,22 @@ On all the move commands apply the following:
 | \sto\s   | ,\n     |
 | ([0-9])$ | $0,     |
 
+### Day 6
+| Search   | Replace |
+|----------|---------|
+| ,        | ,\n     |
+| -        | ,\n     |
+| ([0-9])$ | $0,     |
+
+### Day 7
+First do a find all on 'dir' and add one for the DIR_COUNT.
+
+| Search   | Replace |
+|------------|---------|
+| \$ ls\r\n  |         |
+| dir\s.*\r\n|         |
+| ([0-9]+).* | $1      |
+| ^.*$       | "$0",   |
+
 ## License
 [License](../main/LICENSE)
