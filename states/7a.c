@@ -14,8 +14,12 @@ void init_7a() {
 }
 
 void execute_7a() {
-uint8_t parent_indexes[DIR_COUNT] = {0};
-  uint32_t sizes[DIR_COUNT] = {0};
+  uint8_t parent_indexes[DIR_COUNT];
+  uint32_t sizes[DIR_COUNT];
+  for (uint8_t i = 0; i < DIR_COUNT; i++) {
+    parent_indexes[i] = 0;
+    sizes[i] = 0;
+  }
   uint8_t dir_index = 0;
   uint8_t max_dir_index = 0;
   for (uint16_t i = 1; i < ARRAY_7_SIZE; i++) {

@@ -16,8 +16,12 @@ void execute_3a() {
   uint16_t total_prio = 0;
   for (uint16_t i = 0; i < array_3_size; i++) {
     uint8_t half_length = strlen(input_array_3[i]) / 2;
-    uint8_t array1[53] = {0};
-    uint8_t array2[53] = {0};
+    uint8_t array1[53];
+    uint8_t array2[53];
+    for (uint8_t k = 0; k < 53; k++) {
+      array1[k] = 0;
+      array2[k] = 0;
+    }
     for (uint8_t j = 0; j < half_length; j++) {
       uint8_t index = input_array_3[i][j];
       if ( index > 96) {

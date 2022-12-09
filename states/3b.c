@@ -12,23 +12,19 @@ void init_3b() {
   executed = false;
 }
 
-  uint8_t array1[53];
-  uint8_t array2[53];
-  uint8_t array3[53];
-
-void init_arrays_3() {
-  for (uint8_t i = 0; i < 53; i++) {
-    array1[i] = 0;
-    array2[i] = 0;
-    array3[i] = 0;
-  }
-}
-
 void execute_3b() {
   uint16_t total_prio = 0;
   for (uint16_t i = 0; i < array_3_size; i+=3) {
     uint8_t item_prio = 0;
-    init_arrays_3();
+
+    uint8_t array1[53];
+    uint8_t array2[53];
+    uint8_t array3[53];
+    for (uint8_t i = 0; i < 53; i++) {
+      array1[i] = 0;
+      array2[i] = 0;
+      array3[i] = 0;
+    }
     bool found_match = false;
 
     for (uint8_t j = 0; j < strlen(input_array_3[i]); j++) {

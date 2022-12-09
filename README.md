@@ -70,5 +70,13 @@ First do a find all on 'dir' and add one for the DIR_COUNT.
 | ([0-9]+).* | $1      |
 | ^.*$       | "$0",   |
 
+### Day 8
+
+| Search   | Replace |
+|----------|---------|
+| .        | $0,     |
+| ^        | {       |
+| $        | },      |
+
 ## License
 [License](../main/LICENSE)

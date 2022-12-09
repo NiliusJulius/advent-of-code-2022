@@ -13,7 +13,10 @@ void init_6a() {
 }
 
 void execute_6a() {
-  uint16_t alphabet[26] = {0};
+  uint16_t alphabet[26];
+  for (uint8_t i = 0; i < 26; i++) {
+    alphabet[i] = 0;
+  }
   uint16_t last_match_index = 0;
   for (uint16_t i = 0; i < array_6_size; i++) {
     if (alphabet[input_array_6[i]-97] + 4 > i && alphabet[input_array_6[i]-97] > 0 && last_match_index < alphabet[input_array_6[i]-97]) {
