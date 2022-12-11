@@ -9,3 +9,5 @@ uint8_t prev_input;
 
 uint8_t state;
 bool executed;
+
+uint8_t giant_array[6375];

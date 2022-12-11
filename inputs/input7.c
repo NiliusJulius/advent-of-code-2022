@@ -7,7 +7,7 @@
 const uint32_t total_space = 70000000;
 const uint32_t space_needed = 30000000;
 
-const char *input_array_7[ARRAY_7_SIZE] = { 
+const char * const input_array_7[ARRAY_7_SIZE] = { 
 "$ cd /",
 "113975",
 "50243",

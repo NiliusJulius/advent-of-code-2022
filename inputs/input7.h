@@ -8,6 +8,6 @@
 
 extern const uint32_t total_space;
 extern const uint32_t space_needed;
-extern const char *input_array_7[];
+extern const char * const input_array_7[];
 
 #endif

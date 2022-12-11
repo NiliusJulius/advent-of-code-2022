@@ -5,7 +5,7 @@
 
 const uint16_t array_3_size = 300;
 
-const char *input_array_3[] = {
+const char * const input_array_3[] = {
 "PPZTzDhJPLqPhqDTqrwQZZWbmCBMJMcsNmCBFWmMcsNb",
 "vplSlfdfGvfRRGsgNcMglsFWMWMC",
 "jtjvFHdjjwqrwqwL",

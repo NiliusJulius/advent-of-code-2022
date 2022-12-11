@@ -78,5 +78,21 @@ First do a find all on 'dir' and add one for the DIR_COUNT.
 | ^        | {       |
 | $        | },      |
 
+### Day 9
+First, figure out the max x and y coordinated that could be reached with your input (I used excel and got the cumulative Up/Down Left/Right values after making one of each negative).
+You will have to use this to determine array size and also the starting location.
+
+Then, split the left and right column into two files.
+
+On left:
+| Search | Replace |
+|--------|---------|
+| .      | '$0',   |
+
+On right:
+| Search | Replace |
+|--------|---------|
+| .*     | $0,     |
+
 ## License
 [License](../main/LICENSE)

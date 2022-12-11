@@ -5,6 +5,6 @@
 
 extern const uint16_t array_3_size;
 
-extern const char *input_array_3[];
+extern const char * const input_array_3[];
 
 #endif

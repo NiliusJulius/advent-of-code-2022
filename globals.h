@@ -72,4 +72,6 @@ extern bool executed;
 
 extern void execute();
 
+extern uint8_t giant_array[6375];
+
 #endif
