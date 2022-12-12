@@ -22,6 +22,8 @@
 #include "states\8b.h"
 #include "states\9a.h"
 #include "states\9b.h"
+#include "states\10a.h"
+#include "states\10b.h"
 
 #include "maps\intro_map.h"
 
@@ -94,6 +96,12 @@ void main() {
         break;
       case STATE_9B:
         run_9b();
+        break;
+      case STATE_10A:
+        run_10a();
+        break;
+      case STATE_10B:
+        run_10b();
         break;
     }
 

@@ -22,6 +22,8 @@
 #include "..\states\8b.h"
 #include "..\states\9a.h"
 #include "..\states\9b.h"
+#include "..\states\10a.h"
+#include "..\states\10b.h"
 
 uint8_t menu_item;
 
@@ -114,6 +116,11 @@ void run_intro() {
         init_9a();
         state = STATE_9A;
         break;
+      case 9:
+        SWITCH_ROM(10);
+        init_10a();
+        state = STATE_10A;
+        break;
     }
     clear_screen();
   }
@@ -164,6 +171,11 @@ void run_intro() {
         SWITCH_ROM(9);
         init_9b();
         state = STATE_9B;
+        break;
+      case 9:
+        SWITCH_ROM(10);
+        init_10b();
+        state = STATE_10B;
         break;
     }
     clear_screen();

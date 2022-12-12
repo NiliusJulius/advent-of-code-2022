@@ -94,5 +94,20 @@ On right:
 |--------|---------|
 | .*     | $0,     |
 
+### Day 10
+Split the left and right column into two files.
+
+On left:
+| Search | Replace |
+|--------|---------|
+| (.).*  | $1      |
+| .*     | '$0',   |
+
+On right:
+| Search | Replace |
+|--------|---------|
+| ^$     | 0       |
+| .*     | $0,     |
+
 ## License
 [License](../main/LICENSE)
